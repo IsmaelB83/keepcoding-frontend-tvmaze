@@ -1,10 +1,16 @@
-const logo = document.querySelector('#navbar .navbar-logo');
-
+/**
+ * 
+ * @param {String} removeClass CSS Class to remove
+ * @param {String} addClass CSS Class to add
+ */
 const toggle = elemento => (removeClass, addClass) => {
-    elemento.classList.remove(removeClass);
-    elemento.classList.add(addClass);
+    if (removeClass) elemento.classList.remove(removeClass);
+    if (addClass) elemento.classList.add(addClass);
 }
 
-const handleLogoClassName = toggle(logo);
-
-export { toggle };
+/**
+ * Exports
+ */
+export {
+    toggle
+};

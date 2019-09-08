@@ -1,19 +1,46 @@
-// Imports
-import { toggle } from './ui.js';
+/**
+ * Imports from other modules
+ */
+import {
+    toggle
+} from './ui.js';
 
-// Fetch DOM nodes
+import {
+    renderShowsDOM
+} from './show.js'
+
+/**
+ * Fetch DOM nodes
+ */
 const navbar = document.querySelector('#navbar');
-const searchIcon = document.querySelector('#navbar-search');
 const closeIcon = document.querySelector('#navbar-close');
+const searchIcon = document.querySelector('#navbar-search');
+const searchInput = document.querySelector('#search-form .input.search');
+const searchButton = document.querySelector('#search-form .button.search');
 
-// Declare functions
-const handleNavbar = toggle(navbar);
+/**
+ * Function declarations
+ */
+const toggleNavbar = toggle(navbar);
 
-// Add event handlers
+/**
+ * Event handlers
+ */
 searchIcon.addEventListener('click', () => (
-    handleNavbar('no-search', 'search')
+    toggleNavbar('no-search', 'search')
 ));
 
-closeIcon.addEventListener('click', () => ( 
-    handleNavbar('search', 'no-search')
+closeIcon.addEventListener('click', () => (
+    toggleNavbar('search', 'no-search')
 ));
+
+searchInput.addEventListener('keydown', (ev) => {
+    console.log(ev.key)
+});
+
+searchButton.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    if (searchInput.value !== '') {
+        renderShowsDOM(searchInput.value);
+    }
+});

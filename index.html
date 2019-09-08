@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
   <!-- title -->
-  <title>TVMaze shows</title> 
+  <title>TVMaze shows</title>
   <!-- styles -->
   <link href="/src/css/fontawesome.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  
+
   <!-- navbar -->
   <navbar id="navbar" class="app-navbar no-search filter">
     <div class="navbar-logo">
@@ -23,7 +23,8 @@
     <div class="navbar-right-actions">
       <div class="filter-container">
         <form id="search-form" class="filter-input" novalidate>
-          <input data-pattern-mismatch="Input invalid" required placeholder="search your serie" class="input search" type="text">
+          <input data-pattern-mismatch="Input invalid" required placeholder="search your serie" class="input search"
+            type="text">
           <button type="submit" class="button search">Search</button>
         </form>
       </div>
@@ -34,16 +35,21 @@
     </div>
   </navbar>
   <!-- navbar-end -->
-  
+
   <!-- main -->
   <main>
+    <section id="show-section" class="show-section">
+
+    </section>
   </main>
   <!-- main–end -->
-  
+
   <!-- js -->
+  <script type="module" src="/src/js/ui.js"></script>
   <script type="module" src="/src/js/navbar.js"></script>
+  <script type="module" src="/src/js/show.js"></script>
   <!-- js-end -->
-  
+
 </body>
 
 </html>

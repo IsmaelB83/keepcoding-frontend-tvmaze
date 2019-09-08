@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 0;
   right: 0;
@@ -24,11 +24,13 @@
   font-size: 3rem;
   color: #FFFFFF;
 }
+
 .app-navbar .fas {
   font-size: 2rem;
   cursor: pointer;
   color: #FFFFFF;
 }
+
 .app-navbar .filter-container {
   width: 100%;
 }
@@ -37,12 +39,12 @@
   display: flex;
   margin-right: 20px;
 }
-.app-navbar.no-search .filter-container,
-.app-navbar.no-search .fa-times {
+
+.app-navbar.no-search .filter-container, .app-navbar.no-search .fa-times {
   display: none;
 }
-.app-navbar.no-search .navbar-logo,
-.app-navbar.no-search .fa-search {
+
+.app-navbar.no-search .navbar-logo, .app-navbar.no-search .fa-search {
   display: block;
 }
 
@@ -66,8 +68,7 @@
   }
 }
 
-.app-navbar.search .filter-container,
-.app-navbar.search .fa-times {
+.app-navbar.search .filter-container, .app-navbar.search .fa-times {
   display: block;
 }
 
@@ -75,7 +76,6 @@
   width: 100%;
 }
 
-.app-navbar.search .navbar-logo,
-.app-navbar.search .fa-search {
+.app-navbar.search .navbar-logo, .app-navbar.search .fa-search {
   display: none;
 }
