@@ -19,28 +19,23 @@ const searchInput = document.querySelector('#search-form .input.search');
 const searchButton = document.querySelector('#search-form .button.search');
 
 /**
- * Function declarations
- */
-const toggleNavbar = toggle(navbar);
-
-/**
  * Event handlers
  */
 searchIcon.addEventListener('click', () => (
-    toggleNavbar('no-search', 'search')
+    toggle(navbar, 'no-search', 'search')
 ));
 
 closeIcon.addEventListener('click', () => (
-    toggleNavbar('search', 'no-search')
+    toggle(navbar, 'search', 'no-search')
 ));
 
 searchInput.addEventListener('keydown', (ev) => {
-    console.log(ev.key)
+    if (ev.key === 'Enter') {
+        renderShowsDOM(searchInput.value);
+    }
 });
 
 searchButton.addEventListener('click', (ev) => {
     ev.preventDefault();
-    if (searchInput.value !== '') {
-        renderShowsDOM(searchInput.value);
-    }
+    renderShowsDOM(searchInput.value);
 });
