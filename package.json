@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "http-server": "^0.11.1"
   },
   "scripts": {
+    "start": "",
     "server": "./node_modules/.bin/http-server . -c-1"
   },
   "keywords": [],

@@ -47,6 +47,7 @@ const templateShow = ({
   <div id=${id} class="card ${principal ? "principal" : "secondary close"}">
     <header class="card-header">
       <h2>${name}</h2>
+      <a href='/detail/${id}'><i class="fas fa-arrow-circle-right"></i></a>
     </header>
     <div class="card-content">
       <div class="card-content-image">
